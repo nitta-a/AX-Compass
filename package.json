@@ -1,29 +1,30 @@
 {
-  "name": "ax-compass",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/web/app.ts",
+  "name": "@ax-compass/root",
+  "version": "0.1.0",
+  "private": true,
   "type": "module",
+  "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "convert": "bun src/scraper/convert_csv.ts",
-    "build:data": "bun scripts/build-data.ts",
-    "build": "bun build src/web/app.ts --outdir ./docs",
-    "dev": "bun build src/web/app.ts --outdir ./docs --watch",
+    "scraper": "bun run --cwd packages/scraper start",
+    "build:data": "bun run scraper",
+    "frontend:dev": "bun run --cwd apps/frontend dev",
+    "frontend:build": "bun run --cwd apps/frontend build",
+    "dev": "bun run frontend:dev",
+    "build": "bun run build:data && bun run frontend:build",
+    "typecheck": "bun run --cwd packages/scraper typecheck && bun run --cwd apps/frontend typecheck",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "fmt": "biome format .",
+    "fmt:fix": "biome format --write .",
     "serve": "bunx serve docs",
-    "lint": "biome lint ./src ./test",
-    "lint:fix": "biome lint --write ./src ./test",
-    "fmt": "biome format ./src ./test",
-    "fmt:fix": "biome format --write ./src ./test",
     "test": "bun test"
   },
-  "keywords": ["gBizINFO", "open-data", "typescript", "bun"],
-  "author": "",
+  "keywords": ["ax", "ai-governance", "open-data", "typescript", "bun"],
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "2.4.14",
     "@types/bun": "latest",
-    "@types/node": "latest"
-  },
-  "dependencies": {
+    "@types/node": "latest",
+    "typescript": "^6.0.3"
   }
 }

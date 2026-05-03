@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-05-03T11:57:20.603Z",
+  "itemCount": 2,
+  "items": [
+    {
+      "id": "egov-rss-1",
+      "sourceId": "egov-rss",
+      "sourceTitle": "e-Gov Dummy RSS",
+      "topic": "policy",
+      "title": "e-Gov Dummy RSS update",
+      "summary": "e-Gov Dummy RSS から取得した想定のダミー更新です。実運用では API レスポンスをここで正規化します。",
+      "url": "https://dummy-egov-api.example.com/rss",
+      "publishedAt": "2026-05-03T11:57:17.840Z",
+      "fetchedAt": "2026-05-03T11:57:17.154Z"
+    },
+    {
+      "id": "digital-agency-news-1",
+      "sourceId": "digital-agency-news",
+      "sourceTitle": "Digital Agency Dummy Feed",
+      "topic": "governance",
+      "title": "Digital Agency Dummy Feed update",
+      "summary": "Digital Agency Dummy Feed から取得した想定のダミー更新です。実運用では API レスポンスをここで正規化します。",
+      "url": "https://dummy-egov-api.example.com/digital-agency",
+      "publishedAt": "2026-05-03T11:57:19.565Z",
+      "fetchedAt": "2026-05-03T11:57:18.878Z"
+    }
+  ]
+}
