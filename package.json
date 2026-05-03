@@ -1,0 +1,29 @@
+{
+  "name": "ax-compass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/web/app.ts",
+  "type": "module",
+  "scripts": {
+    "convert": "bun src/scraper/convert_csv.ts",
+    "build:data": "bun scripts/build-data.ts",
+    "build": "bun build src/web/app.ts --outdir ./docs",
+    "dev": "bun build src/web/app.ts --outdir ./docs --watch",
+    "serve": "bunx serve docs",
+    "lint": "biome lint ./src ./test",
+    "lint:fix": "biome lint --write ./src ./test",
+    "fmt": "biome format ./src ./test",
+    "fmt:fix": "biome format --write ./src ./test",
+    "test": "bun test"
+  },
+  "keywords": ["gBizINFO", "open-data", "typescript", "bun"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "2.4.14",
+    "@types/bun": "latest",
+    "@types/node": "latest"
+  },
+  "dependencies": {
+  }
+}
