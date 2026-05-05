@@ -1,13 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "includes": [
-      "packages/**/*.ts",
-      "apps/**/*.ts",
-      "apps/**/*.tsx",
-      "*.json",
-      "*.toml"
-    ]
+    "includes": ["packages/**/*.ts", "apps/**/*.ts", "apps/**/*.tsx", "*.json", "*.toml"]
   },
   "linter": {
     "enabled": true,
@@ -16,7 +10,8 @@
       "style": {
         "useBlockStatements": "off",
         "useNamingConvention": "off",
-        "useThrowOnlyError": "warn"
+        "useThrowOnlyError": "warn",
+        "useConsistentTypeDefinitions": "error"
       },
       "suspicious": {
         "noDoubleEquals": "warn"

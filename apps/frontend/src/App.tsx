@@ -1,24 +1,22 @@
 import { useEffect, useState } from "react";
 
-type CompassEntry = {
+interface PolicyUpdate {
   id: string;
-  sourceId: string;
-  sourceTitle: string;
-  topic: string;
   title: string;
-  summary: string;
   url: string;
   publishedAt: string;
-  fetchedAt: string;
-};
+  source: string;
+  score: number;
+  tags: string[];
+}
 
-type CompassDataset = {
+interface PolicyDataset {
   generatedAt: string;
   itemCount: number;
-  items: CompassEntry[];
-};
+  items: PolicyUpdate[];
+}
 
-const isCompassEntry = (value: unknown): value is CompassEntry => {
+const isPolicyUpdate = (value: unknown): value is PolicyUpdate => {
   if (typeof value !== "object" || value === null) {
     return false;
   }
@@ -27,18 +25,16 @@ const isCompassEntry = (value: unknown): value is CompassEntry => {
 
   return (
     typeof candidate.id === "string" &&
-    typeof candidate.sourceId === "string" &&
-    typeof candidate.sourceTitle === "string" &&
-    typeof candidate.topic === "string" &&
     typeof candidate.title === "string" &&
-    typeof candidate.summary === "string" &&
     typeof candidate.url === "string" &&
     typeof candidate.publishedAt === "string" &&
-    typeof candidate.fetchedAt === "string"
+    typeof candidate.source === "string" &&
+    typeof candidate.score === "number" &&
+    Array.isArray(candidate.tags)
   );
 };
 
-const isCompassDataset = (value: unknown): value is CompassDataset => {
+const isPolicyDataset = (value: unknown): value is PolicyDataset => {
   if (typeof value !== "object" || value === null) {
     return false;
   }
@@ -49,7 +45,7 @@ const isCompassDataset = (value: unknown): value is CompassDataset => {
     typeof candidate.generatedAt === "string" &&
     typeof candidate.itemCount === "number" &&
     Array.isArray(candidate.items) &&
-    candidate.items.every(isCompassEntry)
+    candidate.items.every(isPolicyUpdate)
   );
 };
 
@@ -71,7 +67,7 @@ const getLatestDatasetUrl = (): string => {
 };
 
 export const App = (): JSX.Element => {
-  const [dataset, setDataset] = useState<CompassDataset | null>(null);
+  const [dataset, setDataset] = useState<PolicyDataset | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -93,7 +89,7 @@ export const App = (): JSX.Element => {
 
         const payload = (await response.json()) as unknown;
 
-        if (!isCompassDataset(payload)) {
+        if (!isPolicyDataset(payload)) {
           throw new Error("latest.json has an unexpected schema.");
         }
 
@@ -124,10 +120,10 @@ export const App = (): JSX.Element => {
     <main className="page-shell">
       <section className="hero-panel">
         <p className="eyebrow">AX Compass</p>
-        <h1>政府公開情報を構造化 JSON として追跡する</h1>
+        <h1>AI・DX 政策の最新動向をまとめてチェック</h1>
         <p className="hero-copy">
-          scraper が生成した最新データを読み込み、AX と AI
-          ガバナンス関連の更新を一覧表示します。
+          デジタル庁・経済産業省・総務省・内閣府の公開情報から、AI ガバナンスや DX
+          推進に関するニュースをスコアリングして厳選。重要度の高い情報を見逃しません。
         </p>
         {dataset !== null ? (
           <dl className="metrics-grid">
@@ -155,11 +151,9 @@ export const App = (): JSX.Element => {
             {dataset.items.map((item) => (
               <li className="feed-card" key={item.id}>
                 <div className="feed-card-header">
-                  <span className="feed-topic">{item.topic}</span>
-                  <span className="feed-source">{item.sourceTitle}</span>
+                  <span className="feed-source">{item.source}</span>
                 </div>
                 <h2>{item.title}</h2>
-                <p>{item.summary}</p>
                 <div className="feed-card-footer">
                   <time dateTime={item.publishedAt}>
                     {formatDate(item.publishedAt)}
