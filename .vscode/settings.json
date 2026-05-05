@@ -28,11 +28,15 @@
     "cSpell.words": [
         "addrs",
         "bunx",
+        "CKAN",
+        "egov",
         "gbiz",
         "geolonia",
         "hojin",
         "nitta",
-        "PREFS"
+        "PREFS",
+        "registrator",
+        "Vite"
     ],
     "editor.formatOnSave": true,
     "chat.autopilot.enabled": true,
