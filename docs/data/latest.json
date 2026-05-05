@@ -1,18 +1,7 @@
 {
-  "generatedAt": "2026-05-05T12:24:25.928Z",
-  "itemCount": 13,
+  "generatedAt": "2026-05-05T13:27:30.582Z",
+  "itemCount": 20,
   "items": [
-    {
-      "id": "www-meti-go-jp-press-2026-05-20260501001-20260501001-html",
-      "title": "高性能AIへの対応に関して赤澤経済産業大臣が重要インフラ事業者との意見交換を実施しました",
-      "url": "https://www.meti.go.jp/press/2026/05/20260501001/20260501001.html",
-      "publishedAt": "2026-05-01T10:58:00.000Z",
-      "source": "経済産業省",
-      "score": 10,
-      "tags": [
-        "AI_CORE"
-      ]
-    },
     {
       "id": "www-soumu-go-jp-menu-news-s-news-01tsushin08-02000200-html",
       "title": "林総務大臣とモルドバ共和国経済発展・デジタル化省オスモケスク大臣との協力覚書の署名",
@@ -25,34 +14,12 @@
       ]
     },
     {
-      "id": "www-soumu-go-jp-main-sosiki-joho-tsusin-policyreports-joho-tsusin-ipnet-02kiban0",
-      "title": "情報通信審議会　情報通信技術分科会　IPネットワーク設備委員会 電気通信事業におけるパブリッククラウドシステム利用に関する検討作業班（第3回）",
-      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/ipnet/02kiban05_04000777.html",
-      "publishedAt": "2026-04-29T20:00:00.000Z",
-      "source": "総務省",
-      "score": 1,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www8-cao-go-jp-kisei-kaikaku-kisei-meeting-wg-2501-06ai-260430-ai09-agenda-html",
-      "title": "規制改革推進会議デジタル・ＡＩワーキング・グループ（第9回）",
-      "url": "https://www8.cao.go.jp/kisei-kaikaku/kisei/meeting/wg/2501_06ai/260430/ai09_agenda.html",
-      "publishedAt": "2026-04-28T00:30:00.000Z",
-      "source": "内閣府",
-      "score": 3,
-      "tags": [
-        "GOVERNANCE"
-      ]
-    },
-    {
-      "id": "www-cao-go-jp-consumer-kabusoshiki-ai-technology-003-shiryou-index-html",
-      "title": "第3回人工知能（AI）技術の利用と消費者問題に関する専門調査会【4月23日開催】",
-      "url": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/003/shiryou/index.html",
-      "publishedAt": "2026-04-24T06:26:00.000Z",
-      "source": "内閣府",
-      "score": 20,
+      "id": "www-meti-go-jp-press-2026-05-20260501001-20260501001-html",
+      "title": "高性能AIへの対応に関して赤澤経済産業大臣が重要インフラ事業者との意見交換を実施しました",
+      "url": "https://www.meti.go.jp/press/2026/05/20260501001/20260501001.html",
+      "publishedAt": "2026-05-01T10:58:00.000Z",
+      "source": "経済産業省",
+      "score": 10,
       "tags": [
         "AI_CORE"
       ]
@@ -91,17 +58,6 @@
       ]
     },
     {
-      "id": "www-digital-go-jp-procurement",
-      "title": "一般競争入札：ガバメントクラウドにおける暗号鍵管理環境の構築ツールの開発業務（令和8年度）を掲載しました",
-      "url": "https://www.digital.go.jp/procurement",
-      "publishedAt": "2026-05-01T06:00:00.000Z",
-      "source": "デジタル庁",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
       "id": "www-digital-go-jp-laws",
       "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律第十九条第八号に基づく利用特定個人情報の提供に関する命令第百六十二条の内閣総理大臣及び総務大臣が定める事務及び情報を定める告示を更新しました",
       "url": "https://www.digital.go.jp/laws",
@@ -110,6 +66,17 @@
       "score": 4,
       "tags": [
         "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "www-soumu-go-jp-main-sosiki-joho-tsusin-policyreports-joho-tsusin-ipnet-02kiban0",
+      "title": "情報通信審議会　情報通信技術分科会　IPネットワーク設備委員会 電気通信事業におけるパブリッククラウドシステム利用に関する検討作業班（第3回）",
+      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/ipnet/02kiban05_04000777.html",
+      "publishedAt": "2026-04-29T20:00:00.000Z",
+      "source": "総務省",
+      "score": 1,
+      "tags": [
+        "CONTEXT"
       ]
     },
     {
@@ -135,14 +102,124 @@
       ]
     },
     {
-      "id": "www-digital-go-jp-budget-entrustment-deliverables",
-      "title": "委託調査成果物一覧に「産業領域におけるデータ連携基盤等の社会実装事業」を掲載しました",
-      "url": "https://www.digital.go.jp/budget/entrustment_deliverables",
-      "publishedAt": "2026-04-28T06:00:00.000Z",
-      "source": "デジタル庁",
-      "score": 2,
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20220509-0027",
+      "title": "広報資料：個人情報保護法関係",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20220509_0027",
+      "publishedAt": "2026-04-28T04:03:52.375Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
       "tags": [
-        "CONTEXT"
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "www8-cao-go-jp-kisei-kaikaku-kisei-meeting-wg-2501-06ai-260430-ai09-agenda-html",
+      "title": "規制改革推進会議デジタル・ＡＩワーキング・グループ（第9回）",
+      "url": "https://www8.cao.go.jp/kisei-kaikaku/kisei/meeting/wg/2501_06ai/260430/ai09_agenda.html",
+      "publishedAt": "2026-04-28T00:30:00.000Z",
+      "source": "内閣府",
+      "score": 3,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20260318-0001",
+      "title": "第352回個人情報保護委員会",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20260318_0001",
+      "publishedAt": "2026-04-27T04:04:04.936Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20260409-0001",
+      "title": "第354回 個人情報保護委員会",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20260409_0001",
+      "publishedAt": "2026-04-27T04:04:00.198Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20260325-0001",
+      "title": "第353回個人情報保護委員会",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20260325_0001",
+      "publishedAt": "2026-04-27T04:03:56.087Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "www-cao-go-jp-consumer-kabusoshiki-ai-technology-003-shiryou-index-html",
+      "title": "第3回人工知能（AI）技術の利用と消費者問題に関する専門調査会【4月23日開催】",
+      "url": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/003/shiryou/index.html",
+      "publishedAt": "2026-04-24T06:26:00.000Z",
+      "source": "内閣府",
+      "score": 20,
+      "tags": [
+        "AI_CORE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20260312-0001",
+      "title": "第351回 個人情報保護委員会",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20260312_0001",
+      "publishedAt": "2026-04-20T04:04:35.674Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20260226-0001",
+      "title": "第350回 個人情報保護委員会",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20260226_0001",
+      "publishedAt": "2026-04-09T04:03:55.829Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20220509-0033",
+      "title": "個人情報を考える週間",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20220509_0033",
+      "publishedAt": "2026-04-03T04:04:39.511Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20220509-0031",
+      "title": "マンガで学ぶ個人情報保護法",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20220509_0031",
+      "publishedAt": "2026-04-03T04:04:34.075Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
+      ]
+    },
+    {
+      "id": "data-e-gov-go-jp-data-dataset-ppc-20220509-0028",
+      "title": "広報資料：個人情報保護法関係（動画）",
+      "url": "https://data.e-gov.go.jp/data/dataset/ppc_20220509_0028",
+      "publishedAt": "2026-04-03T04:04:29.506Z",
+      "source": "e-Govデータポータル",
+      "score": 4,
+      "tags": [
+        "GOVERNANCE"
       ]
     }
   ]

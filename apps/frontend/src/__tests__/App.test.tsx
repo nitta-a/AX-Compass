@@ -40,17 +40,18 @@ afterEach(() => {
 describe("App", () => {
   it("データ取得中はローディングメッセージを表示する", () => {
     // fetch を永続的な Pending 状態にすることで isLoading: true を維持する
-    globalThis.fetch = () => new Promise(() => {});
+    globalThis.fetch = (() =>
+      new Promise(() => {})) as unknown as typeof globalThis.fetch;
     render(<App />);
     expect(screen.getByText("データを読み込んでいます。")).toBeDefined();
   });
 
   it("データ取得成功後にフィードカードを表示する", async () => {
-    globalThis.fetch = async () =>
+    globalThis.fetch = (async () =>
       ({
         ok: true,
         json: async () => validDataset,
-      }) as Response;
+      }) as Response) as unknown as typeof globalThis.fetch;
 
     render(<App />);
 
@@ -60,11 +61,11 @@ describe("App", () => {
   });
 
   it("データ取得成功後にローディングメッセージが消える", async () => {
-    globalThis.fetch = async () =>
+    globalThis.fetch = (async () =>
       ({
         ok: true,
         json: async () => validDataset,
-      }) as Response;
+      }) as Response) as unknown as typeof globalThis.fetch;
 
     render(<App />);
 
@@ -73,12 +74,12 @@ describe("App", () => {
   });
 
   it("データ取得失敗時に HTTP status を含むエラーメッセージを表示する", async () => {
-    globalThis.fetch = async () =>
+    globalThis.fetch = (async () =>
       ({
         ok: false,
         status: 503,
         json: async () => ({}),
-      }) as Response;
+      }) as Response) as unknown as typeof globalThis.fetch;
 
     render(<App />);
 
@@ -86,11 +87,11 @@ describe("App", () => {
   });
 
   it("データ取得成功後に HeroPanel の itemCount を表示する", async () => {
-    globalThis.fetch = async () =>
+    globalThis.fetch = (async () =>
       ({
         ok: true,
         json: async () => validDataset,
-      }) as Response;
+      }) as Response) as unknown as typeof globalThis.fetch;
 
     render(<App />);
 
