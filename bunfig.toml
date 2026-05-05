@@ -3,3 +3,5 @@ linker = "isolated"
 
 [test]
 root = "."
+environment = "happy-dom"
+preload = ["./apps/frontend/src/__tests__/setup-dom.ts", "./apps/frontend/src/__tests__/setup.ts"]

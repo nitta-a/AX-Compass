@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": {
+    "packages": ["packages/*", "apps/*"]
+  },
+  "catalog": {
+    "@types/bun": "^1.3.13"
+  },
   "scripts": {
     "scraper": "bun run --cwd packages/scraper start",
     "build:data": "bun run scraper",
@@ -23,7 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "2.4.14",
-    "@types/bun": "latest",
+    "@types/bun": "^1.3.13",
     "@types/node": "latest",
     "typescript": "^6.0.3"
   }

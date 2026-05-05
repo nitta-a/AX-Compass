@@ -10,5 +10,8 @@
   "dependencies": {
     "fast-xml-parser": "^4.5.6",
     "iconv-lite": "^0.7.2"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:"
   }
 }
