@@ -1,4 +1,4 @@
-import type { PolicyDataset, PolicyUpdate } from "./types";
+import type { PolicyDataset, PolicyUpdate } from "../types";
 
 export const isPolicyUpdate = (value: unknown): value is PolicyUpdate => {
   if (typeof value !== "object" || value === null) {

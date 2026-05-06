@@ -1,5 +1,5 @@
+import type { PolicyDataset } from "../types";
 import { isPolicyDataset } from "./guards";
-import type { PolicyDataset } from "./types";
 
 export const fetchPolicyDataset = async (url: string): Promise<PolicyDataset> => {
   const response = await fetch(url);
