@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Viteのデフォルトのビルド出力先を指定
-          path: './apps/frontend/dist'
+          path: './docs'
 
       - name: Deploy to GitHub Pages
         id: deployment
