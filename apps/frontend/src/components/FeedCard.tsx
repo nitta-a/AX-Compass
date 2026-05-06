@@ -5,7 +5,9 @@ interface FeedCardProps {
   item: PolicyUpdate;
 }
 
-export const FeedCard = ({ item }: FeedCardProps): JSX.Element => {
+export const FeedCard: React.FC<FeedCardProps> = (props) => {
+  const { item } = props;
+
   return (
     <li className="feed-card">
       <div className="feed-card-header">

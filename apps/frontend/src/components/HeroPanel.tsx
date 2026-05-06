@@ -5,7 +5,9 @@ interface HeroPanelProps {
   dataset: PolicyDataset | null;
 }
 
-export const HeroPanel = ({ dataset }: HeroPanelProps): JSX.Element => {
+export const HeroPanel: React.FC<HeroPanelProps> = (props) => {
+  const { dataset } = props;
+
   return (
     <section className="hero-panel">
       <p className="eyebrow">AX Compass</p>

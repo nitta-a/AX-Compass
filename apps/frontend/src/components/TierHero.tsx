@@ -5,7 +5,9 @@ interface TierHeroProps {
   items: PolicyUpdate[];
 }
 
-export const TierHero = ({ items }: TierHeroProps): JSX.Element => {
+export const TierHero: React.FC<TierHeroProps> = (props) => {
+  const { items } = props;
+
   return (
     <section className="tier tier--hero" aria-label="重要">
       <h2 className="tier__heading">
@@ -22,11 +24,13 @@ export const TierHero = ({ items }: TierHeroProps): JSX.Element => {
                 </span>
               ))}
             </div>
+
             <h3 className="hero-card__title">
               <a href={item.url} target="_blank" rel="noreferrer">
                 {item.title}
               </a>
             </h3>
+
             <div className="hero-card__meta">
               <span className="hero-card__source">{item.source}</span>
               <time dateTime={item.publishedAt}>

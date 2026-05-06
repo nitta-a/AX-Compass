@@ -6,10 +6,9 @@ interface TabBarProps {
   onTabChange: (tab: Tab) => void;
 }
 
-export const TabBar = ({
-  activeTab,
-  onTabChange,
-}: TabBarProps): JSX.Element => {
+export const TabBar: React.FC<TabBarProps> = (props) => {
+  const { activeTab, onTabChange } = props;
+
   return (
     <nav className="tab-bar" aria-label="カテゴリ絞り込み">
       {TABS.map((t) => (

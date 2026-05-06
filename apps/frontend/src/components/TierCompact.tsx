@@ -5,7 +5,9 @@ interface TierCompactProps {
   items: PolicyUpdate[];
 }
 
-export const TierCompact = ({ items }: TierCompactProps): JSX.Element => {
+export const TierCompact: React.FC<TierCompactProps> = (props) => {
+  const { items } = props;
+
   return (
     <section className="tier tier--compact" aria-label="周辺">
       <h2 className="tier__heading">
