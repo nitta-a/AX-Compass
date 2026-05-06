@@ -1,5 +1,5 @@
-import { formatDate } from "../lib/utils";
-import type { PolicyUpdate } from "../types";
+import { formatDate } from "../../lib/utils";
+import type { PolicyUpdate } from "../../types";
 
 interface TierCompactProps {
   items: PolicyUpdate[];
@@ -17,12 +17,7 @@ export const TierCompact: React.FC<TierCompactProps> = (props) => {
       <ul className="compact-list">
         {items.map((item) => (
           <li key={item.id} className="compact-list__item">
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              className="compact-list__title"
-            >
+            <a href={item.url} target="_blank" rel="noreferrer" className="compact-list__title">
               {item.title}
             </a>
             <span className="compact-list__source">{item.source}</span>

@@ -1,4 +1,4 @@
-import { Dashboard } from "./components/Dashboard";
+import { Dashboard } from "./features/feed/Dashboard";
 import { usePolicyDataset } from "./hooks/usePolicyDataset";
 
 export const App: React.FC = () => {

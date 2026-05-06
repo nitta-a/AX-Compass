@@ -1,5 +1,5 @@
-import { formatDate } from "../lib/utils";
-import type { PolicyDataset } from "../types";
+import { formatDate } from "../../lib/utils";
+import type { PolicyDataset } from "../../types";
 
 interface HeroPanelProps {
   dataset: PolicyDataset | null;

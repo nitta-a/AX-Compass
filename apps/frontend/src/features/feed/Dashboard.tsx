@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
-import { useTieredFeed } from "../hooks/useTieredFeed";
-import { formatDate } from "../lib/utils";
-import type { PolicyUpdate } from "../types";
+import { useTieredFeed } from "../../hooks/useTieredFeed";
+import { formatDate } from "../../lib/utils";
+import type { PolicyUpdate } from "../../types";
 import { TabBar } from "./TabBar";
 import { TierCompact } from "./TierCompact";
 import { TierGrid } from "./TierGrid";

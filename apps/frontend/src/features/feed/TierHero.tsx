@@ -1,5 +1,5 @@
-import { formatDate } from "../lib/utils";
-import type { PolicyUpdate } from "../types";
+import { formatDate } from "../../lib/utils";
+import type { PolicyUpdate } from "../../types";
 
 interface TierHeroProps {
   items: PolicyUpdate[];
@@ -33,9 +33,7 @@ export const TierHero: React.FC<TierHeroProps> = (props) => {
 
             <div className="hero-card__meta">
               <span className="hero-card__source">{item.source}</span>
-              <time dateTime={item.publishedAt}>
-                {formatDate(item.publishedAt)}
-              </time>
+              <time dateTime={item.publishedAt}>{formatDate(item.publishedAt)}</time>
               <span className="hero-card__score">スコア {item.score}</span>
             </div>
           </li>

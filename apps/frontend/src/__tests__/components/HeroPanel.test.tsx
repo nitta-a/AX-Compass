@@ -1,6 +1,6 @@
 import { describe, expect, it } from "bun:test";
 import { render, screen } from "@testing-library/react";
-import { HeroPanel } from "../../components/HeroPanel";
+import { HeroPanel } from "../../features/feed/HeroPanel";
 import type { PolicyDataset } from "../../types";
 
 const sampleDataset: PolicyDataset = {
