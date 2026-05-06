@@ -27,6 +27,17 @@ export const filterByTab = (items: PolicyUpdate[], tab: Tab): PolicyUpdate[] => 
   return items.filter((item) => item.tags.includes(tab));
 };
 
+export const filterBySearch = (items: PolicyUpdate[], query: string): PolicyUpdate[] => {
+  if (query === "") return items;
+  const q = query.toLowerCase();
+  return items.filter(
+    (item) =>
+      item.title.toLowerCase().includes(q) ||
+      item.source.toLowerCase().includes(q) ||
+      item.tags.some((tag) => tag.toLowerCase().includes(q)),
+  );
+};
+
 export const categorizeByTier = (items: PolicyUpdate[]): Tiers => {
   const tier1: PolicyUpdate[] = [];
   const tier2: PolicyUpdate[] = [];

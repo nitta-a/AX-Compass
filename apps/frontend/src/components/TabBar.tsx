@@ -1,5 +1,5 @@
 import type { Tab } from "../lib/policy";
-import { TABS, TAB_LABELS } from "../lib/policy";
+import { TAB_LABELS, TABS } from "../lib/policy";
 
 interface TabBarProps {
   activeTab: Tab;

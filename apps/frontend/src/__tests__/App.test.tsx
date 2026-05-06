@@ -40,8 +40,7 @@ afterEach(() => {
 describe("App", () => {
   it("データ取得中はローディングメッセージを表示する", () => {
     // fetch を永続的な Pending 状態にすることで isLoading: true を維持する
-    globalThis.fetch = (() =>
-      new Promise(() => {})) as unknown as typeof globalThis.fetch;
+    globalThis.fetch = (() => new Promise(() => {})) as unknown as typeof globalThis.fetch;
     render(<App />);
     expect(screen.getByText("データを読み込んでいます。")).toBeDefined();
   });

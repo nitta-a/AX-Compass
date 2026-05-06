@@ -9,20 +9,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="dashboard">
-      {isLoading && (
-        <p className="dashboard__status">データを読み込んでいます。</p>
-      )}
-      {isError && (
-        <p className="dashboard__status dashboard__status--error">
-          {errorMessage}
-        </p>
-      )}
-      {hasData && (
-        <Dashboard
-          items={dataset?.items ?? []}
-          generatedAt={dataset?.generatedAt ?? ""}
-        />
-      )}
+      {isLoading && <p className="dashboard__status">データを読み込んでいます。</p>}
+      {isError && <p className="dashboard__status dashboard__status--error">{errorMessage}</p>}
+      {hasData && <Dashboard items={dataset?.items ?? []} generatedAt={dataset?.generatedAt ?? ""} />}
     </div>
   );
 };
