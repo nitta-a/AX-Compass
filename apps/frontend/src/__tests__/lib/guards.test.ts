@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { isPolicyDataset, isPolicyUpdate } from "../guards";
+import { isPolicyDataset, isPolicyUpdate } from "../../lib/guards";
 
 const validUpdate = {
   id: "001",

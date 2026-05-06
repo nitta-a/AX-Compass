@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { formatDate, getLatestDatasetUrl } from "../utils";
+import { formatDate, getLatestDatasetUrl } from "../../lib/utils";
 
 describe("formatDate", () => {
   it("有効な ISO 日付文字列を日本語フォーマットに変換する", () => {

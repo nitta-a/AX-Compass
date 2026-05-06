@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
-import { fetchPolicyDataset } from "../api";
+import { fetchPolicyDataset } from "../../lib/api";
 
 const validDataset = {
   generatedAt: "2025-01-01T12:00:00Z",

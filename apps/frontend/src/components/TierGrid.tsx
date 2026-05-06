@@ -1,5 +1,5 @@
+import { formatDate } from "../lib/utils";
 import type { PolicyUpdate } from "../types";
-import { formatDate } from "../utils";
 
 interface TierGridProps {
   items: PolicyUpdate[];
@@ -34,7 +34,9 @@ export const TierGrid: React.FC<TierGridProps> = (props) => {
 
             <div className="card__meta">
               <span className="card__source">{item.source}</span>
-              <time dateTime={item.publishedAt}>{formatDate(item.publishedAt)}</time>
+              <time dateTime={item.publishedAt}>
+                {formatDate(item.publishedAt)}
+              </time>
             </div>
             <div className="card__footer">
               <span className="card__score">スコア {item.score}</span>

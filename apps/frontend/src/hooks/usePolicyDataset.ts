@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { fetchPolicyDataset } from "../api";
+import { fetchPolicyDataset } from "../lib/api";
+import { getLatestDatasetUrl } from "../lib/utils";
 import type { PolicyDataset } from "../types";
-import { getLatestDatasetUrl } from "../utils";
 
 interface UsePolicyDatasetResult {
   dataset: PolicyDataset | null;

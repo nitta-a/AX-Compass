@@ -1,5 +1,5 @@
+import { formatDate } from "../lib/utils";
 import type { PolicyUpdate } from "../types";
-import { formatDate } from "../utils";
 
 interface FeedCardProps {
   item: PolicyUpdate;
