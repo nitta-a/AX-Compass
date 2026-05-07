@@ -10,7 +10,7 @@ const QUERY = encodeURIComponent(
   "AI OR 人工知能 OR ガバナンス OR ガイドライン OR デジタルスキル標準 OR スキル標準 OR リスキリング",
 );
 const SORT = encodeURIComponent("metadata_modified desc");
-const EGOV_API_QUERY = `?q=${QUERY}&sort=${SORT}&rows=20`;
+const EGOV_API_QUERY = `?q=${QUERY}&sort=${SORT}&rows=30`;
 
 export const EGOV_API_URL = EGOV_API_BASE + EGOV_API_QUERY;
 

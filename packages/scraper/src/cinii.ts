@@ -9,8 +9,10 @@ import type { PolicyUpdate } from "./types.ts";
 const CINII_API_BASE = "https://cir.nii.ac.jp/opensearch/all";
 const CINII_API_QUERY =
   "?q=" +
-  encodeURIComponent("AI ガバナンス OR デジタルスキル標準 OR LLM 倫理 OR 生成AI ガイドライン") +
-  "&count=20&sortorder=1&format=json";
+  encodeURIComponent(
+    "AI ガバナンス OR デジタルスキル標準 OR LLM 倫理 OR 生成AI ガイドライン OR AX人材 OR AI人材 OR リスキリング",
+  ) +
+  "&count=30&sortorder=1&format=json";
 
 export const CINII_API_URL = CINII_API_BASE + CINII_API_QUERY;
 

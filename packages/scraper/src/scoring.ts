@@ -7,6 +7,8 @@ import type { KeywordRule, PolicyUpdate } from "./types.ts";
 
 export const KEYWORD_RULES: readonly KeywordRule[] = [
   // AI_CORE: AI 技術そのものに関する用語（高スコア）
+  { word: "AX", weight: 10, category: "AI_CORE" },
+  { word: "AIトランスフォーメーション", weight: 10, category: "AI_CORE" },
   { word: "AI", weight: 10, category: "AI_CORE" },
   { word: "生成AI", weight: 10, category: "AI_CORE" },
   { word: "LLM", weight: 10, category: "AI_CORE" },
@@ -28,7 +30,6 @@ export const KEYWORD_RULES: readonly KeywordRule[] = [
   { word: "サイバーセキュリティ", weight: 4, category: "GOVERNANCE" },
   { word: "倫理", weight: 3, category: "GOVERNANCE" },
   // CONTEXT: DX・行政デジタル化に関する用語（低スコア）
-  { word: "AX", weight: 3, category: "CONTEXT" },
   { word: "DX", weight: 2, category: "CONTEXT" },
   { word: "デジタルトランスフォーメーション", weight: 2, category: "CONTEXT" },
   { word: "デジタル化", weight: 2, category: "CONTEXT" },
@@ -59,6 +60,13 @@ export const KEYWORD_RULES: readonly KeywordRule[] = [
   { word: "セキュリティ", weight: 3, category: "GOVERNANCE" },
   // CONTEXT: インシデント対応関連の用語
   { word: "インシデント", weight: 2, category: "CONTEXT" },
+  // CONTEXT: AX人材・AI人材育成関連の用語
+  { word: "AX人材", weight: 10, category: "CONTEXT" },
+  { word: "AI人材", weight: 8, category: "CONTEXT" },
+  { word: "数理・データサイエンス", weight: 5, category: "CONTEXT" },
+  { word: "教育訓練", weight: 4, category: "CONTEXT" },
+  { word: "労働市場", weight: 3, category: "CONTEXT" },
+  { word: "MDASH", weight: 5, category: "CONTEXT" },
 ];
 
 export interface ScoreResult {
