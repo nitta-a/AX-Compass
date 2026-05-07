@@ -69,10 +69,42 @@ export const KEYWORD_RULES: readonly KeywordRule[] = [
   { word: "MDASH", weight: 5, category: "CONTEXT" },
 ];
 
+// ─── Tech Tag Rules ───────────────────────────────────────────────────────────
+// テキストに含まれる技術ドメイン語句からテクニカルタグを抽出するための辞書。
+// 比較は toLowerCase() により大文字小文字を区別しない。
+
+interface TechTagRule {
+  readonly word: string;
+  readonly tag: string;
+}
+
+export const TECH_TAG_RULES: readonly TechTagRule[] = [
+  { word: "認証", tag: "Authentication" },
+  { word: "パスワード", tag: "Authentication" },
+  { word: "データベース", tag: "Data Storage" },
+  { word: "クラウド", tag: "Cloud" },
+  { word: "aws", tag: "Cloud" },
+  { word: "azure", tag: "Cloud" },
+  { word: "rag", tag: "RAG" },
+  { word: "llm", tag: "LLM" },
+  { word: "api", tag: "API" },
+  { word: "セキュリティ", tag: "Security" },
+  { word: "著作権", tag: "IP/Copyright" },
+  { word: "個人情報", tag: "Privacy" },
+];
+
 export interface ScoreResult {
   score: number;
   tags: string[];
 }
+
+// テキストを受け取り、TECH_TAG_RULES に基づくテクニカルタグの配列を返す純粋関数。
+// 比較は toLowerCase() で行い、同一タグへの複数マッチは重複排除して返す。
+export const extractTechTags = (text: string): string[] => {
+  const lower = text.toLowerCase();
+  const matched = TECH_TAG_RULES.filter((rule) => lower.includes(rule.word)).map((rule) => rule.tag);
+  return Array.from(new Set(matched));
+};
 
 // 単一テキストに対してスコアと一致カテゴリの配列を返す純粋関数。
 // 同一カテゴリのキーワードが複数マッチしても重複タグは生成しない。
@@ -88,6 +120,15 @@ export const computeScoreAndTags = (text: string, rules: readonly KeywordRule[])
   }
 
   return { score, tags: [...matchedCategories] };
+};
+
+// カテゴリタグとテクニカルタグを統合して返す分析関数。
+// computeScoreAndTags でカテゴリタグ（AI_CORE, GOVERNANCE, CONTEXT）を算出し、
+// extractTechTags で得たテクニカルタグを結合して最終的な tags として返す。
+export const analyzeText = (text: string): ScoreResult => {
+  const { score, tags: categoryTags } = computeScoreAndTags(text, KEYWORD_RULES);
+  const techTags = extractTechTags(text);
+  return { score, tags: [...categoryTags, ...techTags] };
 };
 
 // score が 0 より大きいアイテムのみを関連情報として扱う。

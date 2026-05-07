@@ -37,17 +37,17 @@ const collectPolicyUpdates = async (sources: RssFeedSource[]): Promise<PolicyUpd
   // e-Gov との連続アクセスを避けるため 2 秒待機する
   await sleep(2_000);
 
-  let ciniiUpdates: PolicyUpdate[] = [];
-  try {
-    const data = await fetchUrl(CINII_API_URL, true);
-    ciniiUpdates = parseCiniiResponse(data);
-    console.log(`[scraper] CiNii: ${ciniiUpdates.length} 件取得`);
-  } catch (error) {
-    console.warn("[scraper] CiNii取得をスキップします:", error instanceof Error ? error.message : String(error));
-  }
+  // let ciniiUpdates: PolicyUpdate[] = [];
+  // try {
+  //   const data = await fetchUrl(CINII_API_URL, true);
+  //   ciniiUpdates = parseCiniiResponse(data);
+  //   console.log(`[scraper] CiNii: ${ciniiUpdates.length} 件取得`);
+  // } catch (error) {
+  //   console.warn("[scraper] CiNii取得をスキップします:", error instanceof Error ? error.message : String(error));
+  // }
 
   // CiNii との連続アクセスを避けるため 2 秒待機する
-  await sleep(2_000);
+  // await sleep(2_000);
 
   const lawUpdates: PolicyUpdate[] = [];
   for (const lawName of TARGET_LAWS) {
@@ -60,11 +60,11 @@ const collectPolicyUpdates = async (sources: RssFeedSource[]): Promise<PolicyUpd
   }
   console.log(`[scraper] e-Gov 法令 (v2): ${lawUpdates.length} 件取得`);
 
-  const combined = [...rssUpdates, ...eGovUpdates, ...ciniiUpdates, ...lawUpdates].filter(isRelevantPolicy);
+  const combined = [...rssUpdates, ...eGovUpdates, ...lawUpdates].filter(isRelevantPolicy);
   const deduped = removeDuplicates(combined);
   const sorted = deduped.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   console.log(
-    `[scraper] RSS: ${rssUpdates.length} 件, e-Gov: ${eGovUpdates.length} 件, CiNii: ${ciniiUpdates.length} 件, 法令: ${lawUpdates.length} 件 → 重複排除・ソート後: ${sorted.length} 件`,
+    `[scraper] RSS: ${rssUpdates.length} 件, e-Gov: ${eGovUpdates.length} 件, 法令: ${lawUpdates.length} 件 → 重複排除・ソート後: ${sorted.length} 件`,
   );
   return sorted;
 };
