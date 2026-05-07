@@ -27,6 +27,18 @@ export const RSS_SOURCES: RssFeedSource[] = [
     sourceName: "デジタル庁",
     url: "https://www.digital.go.jp/rss/news.xml", // デジタル庁 ニュースRSS
   },
+  {
+    sourceName: "文部科学省",
+    url: "https://www.mext.go.jp/b_menu/news/index.rdf", // 文部科学省 新着情報
+  },
+  {
+    sourceName: "厚生労働省",
+    url: "https://www.mhlw.go.jp/stf/news.rdf", // 厚生労働省 報道発表
+  },
+  {
+    sourceName: "IPA (セキュリティ)",
+    url: "https://www.ipa.go.jp/security/alert-rss.rdf", // IPA 重要なセキュリティ情報
+  },
 ];
 
 // ─── Item Normalization ───────────────────────────────────────────────────────
@@ -67,10 +79,9 @@ export const fetchSourceUpdates = async (source: RssFeedSource): Promise<PolicyU
 
     return rawItems.map((item) => normalizeItem(item, source)).filter((item): item is PolicyUpdate => item !== null);
   } catch (error) {
-    console.warn(
-      `[scraper] "${source.sourceName}" の取得をスキップします (${source.url}):`,
-      error instanceof Error ? error.message : String(error),
-    );
+    const msg = error instanceof Error ? error.message : String(error);
+    const { sourceName, url } = source;
+    console.warn(`[scraper] "${sourceName}" の取得をスキップします (${url}): ${msg}`);
     return [];
   }
 };

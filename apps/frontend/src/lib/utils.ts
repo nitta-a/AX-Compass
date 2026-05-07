@@ -5,10 +5,7 @@ export const formatDate = (value: string): string => {
     return value;
   }
 
-  return new Intl.DateTimeFormat("ja-JP", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
+  return new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium", timeStyle: "short" }).format(date);
 };
 
 export const getLatestDatasetUrl = (): string => {

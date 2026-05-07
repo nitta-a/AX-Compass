@@ -6,12 +6,11 @@ import type { PolicyUpdate } from "./types.ts";
 // ─── e-Gov CKAN API ───────────────────────────────────────────────────────────
 
 const EGOV_API_BASE = "https://data.e-gov.go.jp/data/api/action/package_search";
-const EGOV_API_QUERY =
-  "?q=" +
-  encodeURIComponent("AI OR 人工知能 OR ガバナンス OR ガイドライン") +
-  "&sort=" +
-  encodeURIComponent("metadata_modified desc") +
-  "&rows=20";
+const QUERY = encodeURIComponent(
+  "AI OR 人工知能 OR ガバナンス OR ガイドライン OR デジタルスキル標準 OR スキル標準 OR リスキリング",
+);
+const SORT = encodeURIComponent("metadata_modified desc");
+const EGOV_API_QUERY = `?q=${QUERY}&sort=${SORT}&rows=20`;
 
 export const EGOV_API_URL = EGOV_API_BASE + EGOV_API_QUERY;
 

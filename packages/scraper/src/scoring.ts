@@ -39,6 +39,26 @@ export const KEYWORD_RULES: readonly KeywordRule[] = [
   { word: "データ戦略", weight: 2, category: "CONTEXT" },
   { word: "自動化", weight: 1, category: "CONTEXT" },
   { word: "クラウド", weight: 1, category: "CONTEXT" },
+  // GOVERNANCE: DSS・スキル標準関連の用語
+  { word: "デジタルスキル標準", weight: 8, category: "GOVERNANCE" },
+  { word: "DX推進スキル標準", weight: 8, category: "GOVERNANCE" },
+  { word: "スキル標準", weight: 5, category: "GOVERNANCE" },
+  // CONTEXT: リスキリング・IT人材関連の用語
+  { word: "リスキリング", weight: 5, category: "CONTEXT" },
+  { word: "IT人材", weight: 4, category: "CONTEXT" },
+  { word: "DSS", weight: 4, category: "CONTEXT" },
+  // CONTEXT: 教育・医療・金融分野の用語
+  { word: "教育", weight: 3, category: "CONTEXT" },
+  { word: "大学", weight: 2, category: "CONTEXT" },
+  { word: "医療", weight: 3, category: "CONTEXT" },
+  { word: "創薬", weight: 4, category: "CONTEXT" },
+  { word: "金融", weight: 3, category: "CONTEXT" },
+  { word: "銀行", weight: 2, category: "CONTEXT" },
+  // GOVERNANCE: セキュリティ・脆弱性関連の用語
+  { word: "脆弱性", weight: 3, category: "GOVERNANCE" },
+  { word: "セキュリティ", weight: 3, category: "GOVERNANCE" },
+  // CONTEXT: インシデント対応関連の用語
+  { word: "インシデント", weight: 2, category: "CONTEXT" },
 ];
 
 export interface ScoreResult {

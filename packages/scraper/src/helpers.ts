@@ -1,24 +1,25 @@
 // ─── ID & Date Helpers ────────────────────────────────────────────────────────
 
+const replaceFn = (str: string): string => {
+  return str
+    .replace(/[^a-zA-Z0-9]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 80);
+};
 export const generateIdFromUrl = (url: string): string => {
   try {
     const { hostname, pathname, search } = new URL(url);
-    const raw = `${hostname}${pathname}${search}`;
-    return raw
-      .replace(/[^a-zA-Z0-9]/g, "-")
-      .replace(/-+/g, "-")
-      .replace(/^-|-$/g, "")
-      .slice(0, 80);
+    return replaceFn(`${hostname}${pathname}${search}`);
   } catch {
-    return url
-      .replace(/[^a-zA-Z0-9]/g, "-")
-      .replace(/-+/g, "-")
-      .replace(/^-|-$/g, "")
-      .slice(0, 80);
+    return replaceFn(url);
   }
 };
 
 export const toIso8601 = (dateString: string): string => {
   const date = new Date(dateString);
-  return Number.isNaN(date.getTime()) ? new Date().toISOString() : date.toISOString();
+  if (Number.isNaN(date.getTime())) {
+    return new Date().toISOString();
+  }
+  return date.toISOString();
 };
