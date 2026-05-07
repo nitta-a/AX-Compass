@@ -37,6 +37,9 @@ jobs:
         run: bun install
 
       - name: Run Scraper
+        env:
+          # GitHub Secretsから値を取り出し、Node.js/Bunプロセスの環境変数に注入する
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         # データ取得を実行し apps/frontend/public/data/latest.json を生成
         run: bun run --cwd packages/scraper start
 
