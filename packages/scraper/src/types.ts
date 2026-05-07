@@ -14,6 +14,7 @@ export interface PolicyUpdate {
   source: string;
   score: number;
   tags: string[];
+  summary?: string;
 }
 
 export interface PolicyDataset {

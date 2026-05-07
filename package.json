@@ -1,14 +1,18 @@
 {
   "name": "@ax-compass/root",
   "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "workspaces": {
-    "packages": ["packages/*", "apps/*"]
+  "devDependencies": {
+    "@biomejs/biome": "2.4.14",
+    "@types/bun": "^1.3.13",
+    "@types/node": "latest",
+    "typescript": "^6.0.3"
   },
   "catalog": {
     "@types/bun": "^1.3.13"
   },
+  "keywords": ["ax", "ai-governance", "open-data", "typescript", "bun"],
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "scraper": "bun run --cwd packages/scraper start",
     "build:data": "bun run scraper",
@@ -24,12 +28,8 @@
     "serve": "bunx serve docs",
     "test": "bun test"
   },
-  "keywords": ["ax", "ai-governance", "open-data", "typescript", "bun"],
-  "license": "MIT",
-  "devDependencies": {
-    "@biomejs/biome": "2.4.14",
-    "@types/bun": "^1.3.13",
-    "@types/node": "latest",
-    "typescript": "^6.0.3"
+  "type": "module",
+  "workspaces": {
+    "packages": ["packages/*", "apps/*"]
   }
 }
