@@ -35,10 +35,6 @@ export const RSS_SOURCES: RssFeedSource[] = [
     sourceName: "厚生労働省",
     url: "https://www.mhlw.go.jp/stf/news.rdf", // 厚生労働省 報道発表
   },
-  {
-    sourceName: "IPA (セキュリティ)",
-    url: "https://www.ipa.go.jp/security/alert-rss.rdf", // IPA 重要なセキュリティ情報
-  },
 ];
 
 // ─── Item Normalization ───────────────────────────────────────────────────────
