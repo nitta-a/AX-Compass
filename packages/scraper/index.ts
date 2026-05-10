@@ -46,6 +46,9 @@ const buildPolicyData = async (): Promise<string> => {
   // GEMINI_API_KEY が設定されている場合のみ要約エンリッチメントを実行する。
   // ローカル開発では .env から、CI では環境変数から取得する（Bun が自動でロード）。
   const apiKey = process.env.GEMINI_API_KEY;
+  console.log(
+    `[scraper] GEMINI_API_KEY: ${apiKey !== undefined ? "設定あり" : "設定なし"} → 要約エンリッチメントを${apiKey !== undefined ? "実行" : "スキップ"}します`,
+  );
   const enriched = apiKey !== undefined ? await enrichWithSummaries(dataset, apiKey) : dataset;
 
   await writeDataset(enriched);

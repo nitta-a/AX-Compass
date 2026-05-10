@@ -1,7 +1,73 @@
 {
-  "generatedAt": "2026-05-07T23:04:10.296Z",
-  "itemCount": 46,
+  "generatedAt": "2026-05-10T11:08:25.694Z",
+  "itemCount": 43,
   "items": [
+    {
+      "id": "www-digital-go-jp-resources",
+      "title": "デジタル庁紹介冊子「BRIDGE」を掲載しました",
+      "url": "https://www.digital.go.jp/resources",
+      "publishedAt": "2026-05-08T06:00:00.000Z",
+      "source": "デジタル庁",
+      "score": 2,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
+    {
+      "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo3-110-kaisai-mext-00012-html",
+      "title": "教育課程部会　算数・数学ワーキンググループ（第10回）の開催について",
+      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/110/kaisai/mext_00012.html",
+      "publishedAt": "2026-05-08T05:00:00.000Z",
+      "source": "文部科学省",
+      "score": 3,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
+    {
+      "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo2-016-siryo-mext-00007-html",
+      "title": "社会教育主事・社会教育士養成等の改善・充実に関するワーキング・グループ（第7回）配付資料",
+      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo2/016/siryo/mext_00007.html",
+      "publishedAt": "2026-05-08T05:00:00.000Z",
+      "source": "文部科学省",
+      "score": 3,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
+    {
+      "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo2-016-kaisai-mext-00007-html",
+      "title": "社会教育主事・社会教育士養成等の改善・充実に関するワーキング・グループ（第7回）の開催について",
+      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo2/016/kaisai/mext_00007.html",
+      "publishedAt": "2026-05-08T05:00:00.000Z",
+      "source": "文部科学省",
+      "score": 3,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
+    {
+      "id": "www-mhlw-go-jp-stf-newpage-73024-html",
+      "title": "第５回医療扶助・健康管理支援等に関する検討会の開催について（報道発表）",
+      "url": "https://www.mhlw.go.jp/stf/newpage_73024.html",
+      "publishedAt": "2026-05-08T05:00:00.000Z",
+      "source": "厚生労働省",
+      "score": 3,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
+    {
+      "id": "www-soumu-go-jp-main-sosiki-joho-tsusin-policyreports-joho-tsusin-kaisai-02kiban",
+      "title": "情報通信審議会　情報通信技術分科会　IPネットワーク設備委員会 電気通信事業におけるパブリッククラウドシステム利用に関する検討作業班（第4回）開催案内",
+      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban05_04000779.html",
+      "publishedAt": "2026-05-07T20:00:00.000Z",
+      "source": "総務省",
+      "score": 1,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
     {
       "id": "www-mhlw-go-jp-stf-newpage-73033-html",
       "title": "第41回匿名医療情報等の提供に関する専門委員会の開催について",
@@ -22,13 +88,25 @@
       "score": 10,
       "tags": [
         "AI_CORE"
-      ]
+      ],
+      "summary": "文部科学省の「AI for Scienceを支える研究データの管理・利活用と流通の在り方ワーキンググループ」の発表は、開発チームの実務に対し以下の影響を与えます。\n\n*   **アーキテクチャ設計**: 研究データのFAIR原則（Findable, Accessible, Interoperable, Reusable）準拠を前提としたデータカタログ、メタデータ管理システム、およびAPI連携基盤の設計が必須となり、相互運用性を考慮した標準化されたデータ構造が求められます。\n*   **セキュリティ**: 高度なアクセス制御、匿名化・仮名化技術の適用、データライフサイクル全体にわたる暗号化、そしてトレーサビリティを確保するための厳格な認証・認可基盤と監査ログ管理の実装が不可欠になります。\n*   **運用**: 大規模な研究データの長期保存、バージョン管理、品質保証、共有のための継続的な運用体制と、データ生成から廃棄まで一貫したデータライフサイクル管理プロセスの確立が求められます。"
     },
     {
       "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo3-121-kaisai-mext-00009-html",
       "title": "教職課程・免許・大学院課程ワーキンググループ（第8回）の開催について",
       "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/121/kaisai/mext_00009.html",
       "publishedAt": "2026-05-07T04:00:00.000Z",
+      "source": "文部科学省",
+      "score": 2,
+      "tags": [
+        "CONTEXT"
+      ]
+    },
+    {
+      "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo3-125-gijiroku-mext-00001-html",
+      "title": "教員養成部会　教職課程・免許・大学院課程ワーキンググループ養護教諭・栄養教諭作業部会（第2回）議事録",
+      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/125/gijiroku/mext_00001.html",
+      "publishedAt": "2026-05-07T00:00:00.000Z",
       "source": "文部科学省",
       "score": 2,
       "tags": [
@@ -58,17 +136,6 @@
       ]
     },
     {
-      "id": "www-soumu-go-jp-menu-news-s-news-01tsushin08-02000200-html",
-      "title": "林総務大臣とモルドバ共和国経済発展・デジタル化省オスモケスク大臣との協力覚書の署名",
-      "url": "https://www.soumu.go.jp/menu_news/s-news/01tsushin08_02000200.html",
-      "publishedAt": "2026-05-02T20:00:00.000Z",
-      "source": "総務省",
-      "score": 2,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
       "id": "www-meti-go-jp-press-2026-05-20260501001-20260501001-html",
       "title": "高性能AIへの対応に関して赤澤経済産業大臣が重要インフラ事業者との意見交換を実施しました",
       "url": "https://www.meti.go.jp/press/2026/05/20260501001/20260501001.html",
@@ -77,51 +144,8 @@
       "score": 10,
       "tags": [
         "AI_CORE"
-      ]
-    },
-    {
-      "id": "www-digital-go-jp-news-958c0061-eff0-4a37-ad61-f4a992169ff6",
-      "title": "Public Medical Hub システム利用規約（医療機関・薬局向け）の改正について",
-      "url": "https://www.digital.go.jp/news/958c0061-eff0-4a37-ad61-f4a992169ff6",
-      "publishedAt": "2026-05-01T06:00:00.000Z",
-      "source": "デジタル庁",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www-digital-go-jp-councils-mynumbercard-promotion-18e0dbef-510b-43f9-882f-3e09d8",
-      "title": "マイナンバーカードの普及・利用の推進に関する関係省庁連絡会議（第8回）の会議資料を追加しました",
-      "url": "https://www.digital.go.jp/councils/mynumbercard-promotion/18e0dbef-510b-43f9-882f-3e09d811dde9",
-      "publishedAt": "2026-05-01T06:00:00.000Z",
-      "source": "デジタル庁",
-      "score": 1,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www-digital-go-jp-procurement-suspension-and-debarment",
-      "title": "デジタル庁競争参加資格停止・指名停止情報を公表しました",
-      "url": "https://www.digital.go.jp/procurement/suspension-and-debarment",
-      "publishedAt": "2026-05-01T06:00:00.000Z",
-      "source": "デジタル庁",
-      "score": 2,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www-digital-go-jp-procurement",
-      "title": "一般競争入札：ガバメントクラウドにおけるヘルプデスクツール（Zendesk）ライセンスの更新（令和8年7月から令和9年6月）を掲載しました",
-      "url": "https://www.digital.go.jp/procurement",
-      "publishedAt": "2026-05-01T06:00:00.000Z",
-      "source": "デジタル庁",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
+      ],
+      "summary": "経済産業省の発表は、開発チームの実務に以下の影響と注意点をもたらします。\n\n*   **アーキテクチャ設計**: 高性能AIの導入を見据え、スケーラビリティ、耐障害性、リアルタイム処理能力を考慮したアーキテクチャ設計や、AIモデルと既存システムの統合・連携戦略の検討が必須となります。\n*   **セキュリティ**: AI固有の脆弱性（プロンプトインジェクション、データポイズニングなど）への対策に加え、重要インフラに求められる高水準なセキュリティ要件（サプライチェーンリスク管理含む）をAIシステム全体に適用することが不可欠です。\n*   **運用**: AIモデルのライフサイクル管理（監視、再学習、バージョン管理、性能評価）の確立、および将来的に策定される可能性のあるAI関連の法規制・ガイドラインへの対応を視野に入れた運用体制の構築が求められます。"
     },
     {
       "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo4-kaisai-1421019-00032-html",
@@ -179,28 +203,6 @@
       ]
     },
     {
-      "id": "www-mext-go-jp-a-menu-kokusai-gaikokugo-mext-00010-html",
-      "title": "「令和7年度　英語教育に関する調査研究（英語力に関する調査分析）」について",
-      "url": "https://www.mext.go.jp/a_menu/kokusai/gaikokugo/mext_00010.html",
-      "publishedAt": "2026-04-30T06:03:00.000Z",
-      "source": "文部科学省",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www-mext-go-jp-a-menu-nihongo-kyoiku-1420729-00022-htm",
-      "title": "認定日本語教育機関の認定結果（令和7年度2回目）について",
-      "url": "https://www.mext.go.jp/a_menu/nihongo_kyoiku/1420729_00022.htm",
-      "publishedAt": "2026-04-30T05:00:00.000Z",
-      "source": "文部科学省",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
       "id": "www-mhlw-go-jp-stf-newpage-72892-html",
       "title": "薬事審議会　医療機器・体外診断薬部会を開催します",
       "url": "https://www.mhlw.go.jp/stf/newpage_72892.html",
@@ -223,17 +225,6 @@
       ]
     },
     {
-      "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo3-107-kaisai-mext-00008-html",
-      "title": "教育課程部会　国語ワーキンググループ（第9回）の開催について",
-      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/107/kaisai/mext_00008.html",
-      "publishedAt": "2026-04-30T04:58:00.000Z",
-      "source": "文部科学省",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
       "id": "www-mhlw-go-jp-stf-shingi2-newpage-00266-html",
       "title": "第38回社会保障審議会医療保険部会　あん摩マッサージ指圧、はり・きゅう療養費検討専門委員会配布資料",
       "url": "https://www.mhlw.go.jp/stf/shingi2/newpage_00266.html",
@@ -250,17 +241,6 @@
       "url": "https://www.mhlw.go.jp/stf/shingi2/newpage_00265.html",
       "publishedAt": "2026-04-30T03:00:00.000Z",
       "source": "厚生労働省",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www-mext-go-jp-b-menu-shingi-chukyo-chukyo2-016-siryo-mext-00006-html",
-      "title": "社会教育主事・社会教育士養成等の改善・充実に関するワーキング・グループ（第6回）配付資料",
-      "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo2/016/siryo/mext_00006.html",
-      "publishedAt": "2026-04-30T01:00:00.000Z",
-      "source": "文部科学省",
       "score": 3,
       "tags": [
         "CONTEXT"
@@ -392,17 +372,6 @@
       "title": "採用情報（任期付職員（医療情報担当参事官室長補佐）募集情報）",
       "url": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/ninkituki/ninki-iryoujouhoutanntousannjikansitsuchouhosa.html",
       "publishedAt": "2026-04-24T01:00:00.000Z",
-      "source": "厚生労働省",
-      "score": 3,
-      "tags": [
-        "CONTEXT"
-      ]
-    },
-    {
-      "id": "www-mhlw-go-jp-stf-newpage-72847-html",
-      "title": "中央社会保険医療協議会診療報酬調査専門組織（入院・外来医療等の調査・評価分科会）の開催について",
-      "url": "https://www.mhlw.go.jp/stf/newpage_72847.html",
-      "publishedAt": "2026-04-23T02:05:00.000Z",
       "source": "厚生労働省",
       "score": 3,
       "tags": [

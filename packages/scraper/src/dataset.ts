@@ -1,6 +1,5 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { CINII_API_URL, parseCiniiResponse } from "./cinii.ts";
 import { EGOV_API_URL, parseEGovResponse, removeDuplicates } from "./egov.ts";
 import { fetchLawV2, TARGET_LAWS } from "./law.ts";
 import { fetchUrl, INTER_REQUEST_DELAY_MS, sleep } from "./network.ts";

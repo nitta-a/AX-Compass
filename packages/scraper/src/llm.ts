@@ -19,12 +19,14 @@ export const buildSummaryPrompt = (title: string, source: string): string => {
 // ─── Side-Effect Functions ────────────────────────────────────────────────────
 
 const GEN_MODEL = "gemini-2.5-flash";
-const EMPTY_RES = "[llm] Gemini API: 空のレスポンスが返されました";
-const ERR_RES = "[llm] Gemini API: API呼び出しに失敗しました";
+const LOG_PREFIX = "[llm] Gemini API: ";
+const EMPTY_RES = `${LOG_PREFIX}空のレスポンスが返されました`;
+const ERR_RES = `${LOG_PREFIX}API呼び出しに失敗しました`;
 
 // Gemini 2.5 Flash API を呼び出し要約テキストを返す副作用関数。
 // エラー時・空レスポンス時は警告を出力して null を返す。
 export const generateSummary = async (prompt: string, apiKey: string): Promise<string | null> => {
+  console.log(`${LOG_PREFIX}API を呼び出しています...`);
   try {
     const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({ model: GEN_MODEL, contents: prompt });
@@ -34,6 +36,7 @@ export const generateSummary = async (prompt: string, apiKey: string): Promise<s
       console.warn(EMPTY_RES);
       return null;
     }
+    console.log(`${LOG_PREFIX}要約が返されました: ${text.length} 文字`);
     return text;
   } catch (error) {
     const msg = error instanceof Error ? error.message : String(error);
